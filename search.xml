@@ -1,26 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
-  <entry>
-    <title><![CDATA[learning(scikit-learn,tensorflow)]]></title>
-    <url>%2F2019%2F07%2F24%2Flearning-scikit-learn-tensorflow%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
-    <title><![CDATA[learn-opengl]]></title>
-    <url>%2F2019%2F07%2F22%2Flearn-opengl%2F</url>
-    <content type="text"><![CDATA[Getting StartedHello Triangle vertex:a 3D position and some color value primitives: GL_POINTS, GL_TRIANGLES, GL_LINE_STRIP fragment:A fragment in OpenGL is all the data required for OpenGL to render a single pixel. graphics pipeline **graphics pipeline** blue sections represent sections where we can inject our own shaders ![](index_files/2098c9e9-e7e9-4dd2-9b66-28ac714a6481.jpg) vertex shader: transform 3D coordinates into different 3D coordinates, do some basic processing on the vertex attributes primitive assembly: form a primitive and assembles all the point(s) in the primitive shape given geometry shader: generate other shapes by emitting new vertices to form new (or other) primitive(s) rasterization stage: maps the resulting primitive(s) to the corresponding pixels on the final screen,resulting in fragments for the fragment shader to use.Clipping discards all fragments that are outside your view fragment shader: calculate the final color of a pixel and this is usually the stage where all the advanced OpenGL effects occur alpha test and blending stage: checks the corresponding depth(discarded). checks for alpha values(blending) Vertex inputNormalized Device Coordinates (NDC):Once your vertex coordinates have been processed in the vertex shader, they should be in normalized device coordinates which is a small space where the x, y and z values vary from -1.0 to 1.0 vertex buffer objects (VBO):store a large number of vertices in the GPU’s memory.The advantage of using those buffer objects is that we can send large batches of data all at once to the graphics card without having to send data a vertex a time 123456789unsigned int VBO;glGenBuffers(1, &amp;VBO);//generate one gpu buffer with a buffer ID/*We can bind the newly created buffer to the GL_ARRAY_BUFFER target*/glBindBuffer(GL_ARRAY_BUFFER, VBO);/*any buffer calls we make (on the GL_ARRAY_BUFFER target) will be used to configure the currently bound buffer, which is VBO*///copies the previously defined vertex data into the buffer's memoryglBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); GL_STATIC_DRAW: the data will most likely not change at all or very rarely.GL_DYNAMIC_DRAW: the data is likely to change a lot.GL_STREAM_DRAW: the data will change every time it is drawn. Vertex shader]]></content>
-      <categories>
-        <category>opengl</category>
-      </categories>
-      <tags>
-        <tag>opengl</tag>
-        <tag>图形学</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F07%2F22%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-  </entry>
 </search>
